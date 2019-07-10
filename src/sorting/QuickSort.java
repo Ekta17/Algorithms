@@ -12,9 +12,7 @@ import utilities.Util;
  * 
  * In the below implementation, we choose pivot as the last element in the array. 
  * This implementation of choosing pivot is based on Lomuto Partitioning method.
- * Using this technique instead of moving elements within the array, 
- * we operate on moving the indexes and then swap the elements only when required. 
- * This technique creates an in-place version of Quicksort.
+ * 
  *
  */
 
