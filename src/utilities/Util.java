@@ -17,4 +17,10 @@ public class Util {
 		else
 			return Arrays.asList(o).isEmpty();
 	}
+	
+	public static void swapArrayElements(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
 }

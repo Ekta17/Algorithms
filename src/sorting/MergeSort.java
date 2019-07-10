@@ -1,10 +1,10 @@
-package DivideAndConquer;
+package sorting;
 
 import java.util.StringJoiner;
 
 import utilities.Util;
 
-public class MergeSortAlgo {
+public class MergeSort {
 
 	public static void main(String[] args) {
 		int[] a = { 5, 2, 3, 1, 0 };
@@ -40,14 +40,17 @@ public class MergeSortAlgo {
 		int[] lowArray = new int[lowArrayLen];
 		int[] highArray = new int[highArrayLen];
 
+		//copy the elements of array from low to mid
 		for (int i = 0; i < lowArrayLen; i++) {
 			lowArray[i] = a[low + i];
 		}
 
+		//copy the elements of array from mid +1 to high
 		for (int j = 0; j < highArrayLen; j++) {
 			highArray[j] = a[mid + 1 + j];
 		}
 
+		//P.S. k is initialized to low and not 0
 		int i = 0, j = 0, k = low;
 		while (i < lowArrayLen && j < highArrayLen) {
 			if (lowArray[i] <= highArray[j])
@@ -56,10 +59,12 @@ public class MergeSortAlgo {
 				a[k++] = highArray[j++];
 		}
 
+		//copy elements remaining of left array
 		while (i < lowArrayLen) {
 			a[k++] = lowArray[i++];
 		}
 
+		//copy elements remaining of right array
 		while (j < highArrayLen) {
 			a[k++] = highArray[j++];
 		}
