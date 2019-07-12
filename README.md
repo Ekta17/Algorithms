@@ -28,3 +28,5 @@ This repository contains the following algorithms:
 		- Best case Time Complexity = O(n logn)
 		- Average case Time Complexity = O(n logn)
 		- Worst case Time Complexity = O(n2)
+		
+3) Searching Algorithm: Binary Search
